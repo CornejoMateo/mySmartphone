@@ -926,15 +926,28 @@ section,
 /*--------------------------------------------------------------
 # Team Section
 --------------------------------------------------------------*/
+
+.relojes-row {
+  margin-bottom: 40px; /* Ajusta el valor a tu gusto */
+}
+
+.team-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
 .team .team-member {
   background-color: var(--surface-color);
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
   position: relative;
   border-radius: 5px;
   transition: 0.5s;
-  padding: 30px;
+  padding: 50px;
   height: 100%;
-  width: 60%;
+  width: 280px;
+  max-width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -948,6 +961,12 @@ section,
     flex-direction: column;
     justify-content: center !important;
     align-items: center !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .team-container {
+    justify-content: center;
   }
 }
 
