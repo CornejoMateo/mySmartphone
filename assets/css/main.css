@@ -1,15 +1,4 @@
-/**
-* Template Name: ZenBlog
-* Template URL: https://bootstrapmade.com/zenblog-bootstrap-blog-template/
-* Updated: Aug 08 2024 with Bootstrap v5.3.3
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
 
-/*--------------------------------------------------------------
-# Font & Color Variables
-# Help: https://bootstrapmade.com/color-system/
---------------------------------------------------------------*/
 /* Fonts */
 :root {
   --default-font: "EB Garamond",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -406,7 +395,7 @@ h6 {
   margin-bottom: 25px;
 }
 
-.footer .footer-about .logo img {
+.footer .footer-about .logo  {
   max-height: 40px;
   margin-right: 6px;
 }
@@ -945,7 +934,14 @@ section,
   transition: 0.5s;
   padding: 30px;
   height: 100%;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
 }
+
 
 @media (max-width: 468px) {
   .team .team-member {
@@ -957,9 +953,19 @@ section,
 
 .team .team-member .pic {
   overflow: hidden;
-  width: 150px;
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
   border-radius: 50%;
+  margin-bottom: 20px;
+  overflow: hidden;
+  border-radius: 5%;
   flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .team .team-member .pic img {
@@ -982,7 +988,7 @@ section,
 }
 
 .team .team-member h4 {
-  font-weight: 700;
+  font-weight: 500;
   margin-bottom: 5px;
   font-size: 20px;
 }
