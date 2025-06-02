@@ -136,7 +136,11 @@
     document.addEventListener('DOMContentLoaded', () => {
     const container = document.getElementById('relojes-list');
     if (!window.relojes || window.relojes.length === 0) {
-      container.innerHTML = '<p>No hay relojes disponibles en este momento</p>';
+      container.innerHTML = `
+        <div class="text-center my-5" data-aos="fade-up" data-aos-delay="100">
+          <p class="fs-4 text-muted">No hay productos disponibles por el momento</p>
+        </div>
+      `;    
       return;
     }
 
