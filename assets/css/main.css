@@ -49,10 +49,19 @@
 /*--------------------------------------------------------------
 # General Styling & Shared Classes
 --------------------------------------------------------------*/
-body {
+
+main.main {
+  flex-grow: 1; /* toma el espacio disponible */
+}
+
+html,body {
   color: var(--default-color);
   background-color: var(--background-color);
   font-family: var(--default-font);
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 a {
@@ -74,6 +83,10 @@ h5,
 h6 {
   color: var(--heading-color);
   font-family: var(--heading-font);
+}
+
+h2{
+  margin-bottom: 0%;
 }
 
 /*--------------------------------------------------------------
@@ -162,7 +175,7 @@ h6 {
   .navmenu a,
   .navmenu a:focus {
     color: var(--nav-color);
-    padding: 18px 15px;
+    padding: 10% 15px;
     font-size: 14px;
     font-family: var(--nav-font);
     font-weight: 400;
@@ -386,13 +399,13 @@ h6 {
 }
 
 .footer .footer-top {
-  padding-top: 50px;
+  padding-top: 0px;
   border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
 }
 
 .footer .footer-about .logo {
   line-height: 1;
-  margin-bottom: 25px;
+  margin-bottom:0px;
 }
 
 .footer .footer-about .logo  {
@@ -436,11 +449,11 @@ h6 {
   font-size: 16px;
   font-weight: bold;
   position: relative;
-  padding-bottom: 12px;
+  padding-bottom: 0px;
 }
 
 .footer .footer-links {
-  margin-bottom: 30px;
+  margin-bottom: 0px;
 }
 
 .footer .footer-links ul {
@@ -456,7 +469,7 @@ h6 {
 }
 
 .footer .footer-links ul li {
-  padding: 10px 0;
+  padding: 0px 0;
   display: flex;
   align-items: center;
 }
@@ -476,11 +489,11 @@ h6 {
 }
 
 .footer .footer-contact p {
-  margin-bottom: 5px;
+  margin-bottom: 0px;
 }
 
 .footer .copyright {
-  padding: 25px 0;
+  padding: 1%;
   border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
 }
 
@@ -489,12 +502,28 @@ h6 {
 }
 
 .footer .credits {
-  margin-top: 8px;
+  margin-top: 0px;
   font-size: 13px;
 }
 
 .footer .credits a {
   color: var(--default-color);
+}
+
+.footer .footer-info-row {
+  justify-content: center;  /* centra el contenido horizontalmente */
+  gap: 1.5rem;               /* reduce espacio entre elementos */
+  flex-wrap: wrap;           /* se adapta mejor a pantallas pequeñas */
+  margin-bottom: 0px;
+}
+
+.footer .footer-info-row p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.footer .social-links {
+  margin-top: 0 !important;  /* elimina espacio innecesario arriba del ícono */
 }
 
 /*--------------------------------------------------------------
@@ -927,15 +956,24 @@ section,
 # Team Section
 --------------------------------------------------------------*/
 
+.subtitulo {
+  margin-bottom: -3%;
+  text-align: center;
+}
+
 .relojes-row {
-  margin-bottom: 40px; /* Ajusta el valor a tu gusto */
+  margin-bottom: 2%; 
+  flex-wrap: wrap;
+  justify-content: flex-start; 
 }
 
 .team-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 30px;
+  gap: 24px;
+  width: 100%;
+  padding: 0 16px;
 }
 
 .team .team-member {
@@ -944,29 +982,27 @@ section,
   position: relative;
   border-radius: 5px;
   transition: 0.5s;
-  padding: 50px;
-  height: 100%;
-  width: 280px;
-  max-width: 100%;
+  padding: 32px 16px;
+  width: 100%;
+  max-width: 320px;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  margin: 0;
   justify-content: center;
-}
-
-
-@media (max-width: 468px) {
-  .team .team-member {
-    flex-direction: column;
-    justify-content: center !important;
-    align-items: center !important;
-  }
 }
 
 @media (max-width: 768px) {
   .team-container {
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+  .team .team-member {
+    width: 90%;
+    max-width: 80%;
+    margin: 0 auto;
   }
 }
 
